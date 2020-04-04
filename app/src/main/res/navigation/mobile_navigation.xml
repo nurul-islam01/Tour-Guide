@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_tour">
+
+    <fragment
+        android:id="@+id/nav_tour"
+        android:name="com.nit.tourguide.ui.tour.TourFragment"
+        android:label="@string/menu_tour"
+        tools:layout="@layout/tour_fragment" />
+
+    <fragment
+        android:id="@+id/nav_weather"
+        android:name="com.nit.tourguide.ui.weather.WeatherFragment"
+        android:label="@string/menu_weather"
+        tools:layout="@layout/weather_fragment" />
+
+    <fragment
+        android:id="@+id/nav_map"
+        android:name="com.nit.tourguide.ui.map.MapFragment"
+        android:label="@string/menu_map"
+        tools:layout="@layout/map_fragment" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.nit.tourguide.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+</navigation>

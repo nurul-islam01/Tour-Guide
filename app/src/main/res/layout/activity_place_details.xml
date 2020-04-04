@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PlaceDetailsActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:behavior_hideable="false"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:behavior_skipCollapsed="false"
+        app:behavior_peekHeight="100dp"
+        android:background="@drawable/bottomsheet_bg">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bottomsheet_bg"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/formattedName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/textColor"
+                android:padding="3dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:textSize="18sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:padding="5dp"
+                android:visibility="visible"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/destinationImage"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter" />
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                        android:layout_marginLeft="10dp">
+                        <TextView
+                            android:id="@+id/formattedAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textColor" />
+                        <TextView
+                            android:id="@+id/distanceAndTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textColor"
+                            />
+                        <TextView
+                            android:id="@+id/formattedPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textColor"
+                            />
+                        <TextView
+                            android:id="@+id/ratingAndOpen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textColor" />
+                        <Button
+                            android:id="@+id/weeklyOpen"
+                            android:layout_width="120dp"
+                            android:layout_height="30dp"
+                            android:background="#135f93"
+                            android:text="Weekly Open"
+                            android:textSize="12sp"
+                            android:textColor="@color/textColor" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/stepContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:nestedScrollingEnabled="true" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

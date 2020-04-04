@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="collapseActionView|ifRoom"
+        android:title="Search" />
+    <item android:id="@+id/celcius_menu"
+        android:title="Celcius" />
+    <item android:id="@+id/farenheit_menu"
+        android:title="Farenheit" />
+</menu>
