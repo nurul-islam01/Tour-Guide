@@ -146,6 +146,7 @@ public class WeatherFragment extends Fragment implements AppLocationListener {
 //            add = add + "\n" + obj.getCountryName();
 //            add = add + "\n" + obj.getCountryCode();
 //            add = add + "\n" + obj.getAdminArea();
+
 //            add = add + "\n" + obj.getPostalCode();
 //            add = add + "\n" + obj.getSubAdminArea();
 //            add = add + "\n" + obj.getLocality();

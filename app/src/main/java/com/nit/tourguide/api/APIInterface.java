@@ -22,32 +22,24 @@ public interface APIInterface {
     @GET()
     Call<SelectPlace> selectedPlace(@Url String url);
 
-//    @GET()
-//    Call<HourlyForecast> getHourlyForcust(@Url String url);
-//
-//    @GET()
-//    Call<CurrentWeather> getCurrentForcust(@Url String url);
-//
-//    @GET()
-//    Call<WeeklyForecast> getWeeklyForcust(@Url String url);
 
     @Headers({
             "x-rapidapi-host: community-open-weather-map.p.rapidapi.com",
-            "x-rapidapi-key: 59eb49e768msh48dfdf5c23d6ec4p1e7e5ejsnf7976c94cc4f"
+            "x-rapidapi-key: 0619762ae6msh21af15bdb4cc94ep15e1dbjsnf2bdcc399f5e"
     })
     @GET()
     Call<Current> current(@Url String url);
 
     @Headers({
             "x-rapidapi-host: community-open-weather-map.p.rapidapi.com",
-            "x-rapidapi-key: 59eb49e768msh48dfdf5c23d6ec4p1e7e5ejsnf7976c94cc4f"
+            "x-rapidapi-key: 0619762ae6msh21af15bdb4cc94ep15e1dbjsnf2bdcc399f5e"
     })
     @GET()
     Call<Weekly> weekly(@Url String url);
 
     @Headers({
             "x-rapidapi-host: community-open-weather-map.p.rapidapi.com",
-            "x-rapidapi-key: 59eb49e768msh48dfdf5c23d6ec4p1e7e5ejsnf7976c94cc4f"
+            "x-rapidapi-key: 0619762ae6msh21af15bdb4cc94ep15e1dbjsnf2bdcc399f5e"
     })
     @GET()
     Call<Hourly> hourly(@Url String url);
