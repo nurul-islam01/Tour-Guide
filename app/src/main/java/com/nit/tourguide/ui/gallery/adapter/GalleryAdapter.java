@@ -24,6 +24,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.nit.tourguide.R;
 import com.nit.tourguide.activity.SliderActivity;
+import com.nit.tourguide.utlis.RoundRectCornerImageView;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -95,14 +96,14 @@ public class GalleryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 
     public class ImageHolder extends RecyclerView.ViewHolder {
-        private ImageView image;
+        private RoundRectCornerImageView image;
         public ImageHolder(@NonNull View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.image);
         }
     }
     public class VideoHolder extends RecyclerView.ViewHolder {
-        private ImageView video;
+        private RoundRectCornerImageView video;
         public VideoHolder(@NonNull View itemView) {
             super(itemView);
             video = itemView.findViewById(R.id.video);
